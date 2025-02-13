@@ -1,9 +1,10 @@
-{% extends "index.html" %} {% block content %}
+{% extends 'index.html' %} {% block content %}
 
-<a href="{% url 'erp:uno' %}">click</a>
+<a href="{% url 'erp:dos' %}">Click</a>
+
 <ul>
   {% for product in products %}
-  <li>{{product.id}} / {{product.name}} / {{product.cate.name}}</li>
+  <li>{{ product.id }} / {{ product.name }} / {{ product.cate.name }}</li>
   {% endfor %}
 </ul>
 {% endblock %}
